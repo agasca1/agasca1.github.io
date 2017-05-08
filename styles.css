@@ -1,0 +1,45 @@
+body{
+	background-color: lightblue;
+}
+
+h1{
+	color: blue;
+	text-align: center;
+}
+
+.nav{
+	width: auto;
+	height: auto;
+	position: relative;
+	background-color: red;
+	overflow: hidden;
+	border: none;
+}
+
+ul{
+	list-style-type: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	/*width: 100%;*/
+	overflow: hidden;
+}
+li {
+	text-decoration: none;
+	float: left;
+	/*padding-left:5%;
+	padding-right: 5%;
+	padding-top: 5px;*/
+	min-width: 10%;
+	overflow: hidden;
+}
+
+a {
+	font-size: 1.5em;
+}
+
+ul a:hover{
+	background-color:blue;
+	color: white;
+}

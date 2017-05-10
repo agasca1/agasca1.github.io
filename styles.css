@@ -12,7 +12,7 @@ header {
 	background: yellow;
 	height: 100px;
 	padding-top: 50px;
-	position: fixed;
+	/*position: fixed;*/
 	top:0;
 	width: 100%;
 	
@@ -31,7 +31,7 @@ header {
 	border: none;
 	z-index: 150;
 	box-shadow: 0 2px 3px rgba(0,0,0, .4);
-	margin-bottom: -25px;/* since nav hight is 80px (according to website.. so it wouldnt jump)*/
+	margin-bottom: -25px;/* since nav hight is 80px */
 }
 
 ul{
@@ -87,7 +87,7 @@ ul li:hover{
 	position: relative;
 }
 
-.main-nav-scrolled {
+.main-nav.main-nav-scrolled {
 	position: fixed;
 	top:0;
 	width: 100%;

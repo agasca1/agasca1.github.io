@@ -3,7 +3,21 @@
 <html>
 <head>
 	<link rel="stylesheet" href="styles.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script>
+		var mn = $(".main-nav");
+		mns = "main-nav-scrolled";
+		hdr = $('header').height();
+
+		$(window).scroll(funtion() {
+			if( $(this).scrollTop() > hdr ){
+				mn.addClass(mns);
+			} else{
+				mn.removeClass(mns);
+
+			}
+		});
+	</script>
 </head>
 <body>
 
@@ -27,7 +41,7 @@
 	<p>Who is I?</p>
 	<p>I is so cool.</p>
 	<p> 
-		
+
 	THE LEROUGE CASE
 
 	By Emile Gaboriau
@@ -274,6 +288,5 @@
 
 
 <footer> contact me here</footer>
-<script src = "jqnav_scrolled.js"></script> 
 </body>
 </html>

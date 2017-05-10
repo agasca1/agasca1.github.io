@@ -1,20 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="styles.css">
-	<script src="jquery-3.2.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<meta charset="UTF-8">
+
 	<script>
-		var mn = $(".main-nav");
-		mns = "main-nav-scrolled";
-		hdr = $('header').height();
+	
+		var mns = "main-nav-scrolled";
 
-		$(window).bind('scroll',funtion() {
-			if( $(this).scrollTop() > hdr ){
-				mn.addClass(mns);
-			} else{
-				mn.removeClass(mns);
-
+		$( window ).scroll(function() {
+			if( $(this).scrollTop() > $('header').height() )
+			{
+				$(".main-nav").addClass("main-nav-scrolled");
+			}
+			else 
+			{
+				$(".main-nav").removeClass(mns);
 			}
 		});
 	</script>
@@ -289,4 +291,5 @@
 
 <footer> contact me here</footer>
 </body>
+
 </html>

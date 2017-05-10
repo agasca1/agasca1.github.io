@@ -8,14 +8,14 @@ h1{
 	color: blue;
 	text-align: center;
 }
+
 header {
 	background: yellow;
 	height: 100px;
 	padding-top: 50px;
 	/*position: fixed;*/
 	top:0;
-	width: 100%;
-	
+	width: 100%;	
 }
 
 .main-nav{
@@ -44,10 +44,10 @@ ul{
 	/*width: 100%;*/
 	overflow: hidden;
 	display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-	
+	justify-content: space-around;
+	flex-wrap: wrap;	
 }
+
 li {
 	text-decoration: none;
 	float: left;
@@ -61,7 +61,6 @@ li {
 	/*padding: 0px;*/
 	text-align: center;
 	flex-grow: 1;
-
 }
 
 a {
@@ -75,20 +74,17 @@ ul li:hover{
 	box-shadow: 1px 1px 10px #3e3d3d;
 }
 
-
 .content{
 	font-size: 20px;
 	background: lightgreen;
 	padding-right: 110px 50px 50px; /* compensate for the top*/
 }
 
-.main-nav, 
-.content{
+.main-nav, .content{
 	position: relative;
 }
 
-header,
-.main-nav .main-nav-scrolled {
+header, .main-nav .main-nav-scrolled {
 	position: fixed;
 	top:0;
 	width: 100%;

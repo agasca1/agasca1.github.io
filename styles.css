@@ -1,45 +1,94 @@
 body{
 	background-color: lightblue;
+	margin 0;
+	padding-top: 250px;
 }
 
 h1{
 	color: blue;
 	text-align: center;
 }
+header {
+	background: yellow;
+	height: 100px;
+	padding-top: 50px;
+	position: fixed;
+	top:0;
+	width: 100%;
+	
+}
 
-.nav{
+.main-nav{
 	width: auto;
-	height: auto;
+	height: auto; /* has it as 80px*/
 	position: relative;
 	background-color: red;
 	overflow: hidden;
+	/*border: none;*/
+	/*margin: 0px;*/
+	padding: 0px;
+	border: 0px;
 	border: none;
+	z-index: 150;
+	box-shadow: 0 2px 3px rgba(0,0,0, .4);
+	margin-bottom: -80px;/* since nav hight is 80px */
 }
 
 ul{
 	list-style-type: none;
 	text-decoration: none;
-	padding: 0;
-	margin: 0;
-	float: left;
+	margin: 0px;
+	padding: 0px;
+	border: 10px;
+	/*float: left;*/
 	/*width: 100%;*/
 	overflow: hidden;
+	display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	
 }
 li {
 	text-decoration: none;
 	float: left;
-	/*padding-left:5%;
-	padding-right: 5%;
-	padding-top: 5px;*/
+	padding-left:1%;
+	padding-right: 1%;
+	/*padding-top: 1%;*/
 	min-width: 10%;
-	overflow: hidden;
+	max-width: 50%;
+	/*overflow: hidden;*/
+	margin: 0px;
+	/*padding: 0px;*/
+	text-align: center;
+	flex-grow: 1;
+
 }
 
 a {
 	font-size: 1.5em;
 }
 
-ul a:hover{
+ul li:hover{
 	background-color:blue;
 	color: white;
+	text-shadow: 3px 3px 6px #3e3d3d;
+	box-shadow: 1px 1px 10px #3e3d3d;
+}
+
+
+.content{
+	font-size: 20px;
+	background: lightgreen;
+	padding-right: 110px 50px 50px; /* compensate for the top*/
+}
+
+.main-nav, 
+.content{
+	position: relative;
+}
+
+.main-nav-scrolled {
+	position: fixed;
+	top:0;
+	width: 100%;
 }

@@ -88,7 +88,7 @@ ul li:hover{
 }
 
 header,
-.main-nav.main-nav-scrolled {
+.main-nav .main-nav-scrolled {
 	position: fixed;
 	top:0;
 	width: 100%;

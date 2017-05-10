@@ -77,7 +77,7 @@ ul li:hover{
 .content{
 	font-size: 20px;
 	background: lightgreen;
-	padding-right: 110px 50px 50px; /* compensate for the top*/
+	padding-top: 80px; /* compensate for the top*/
 }
 
 		 

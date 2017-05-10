@@ -6,10 +6,11 @@
 	<meta charset="UTF-8">
 
 	<script>
+	
 		var mns = "main-nav-scrolled";
 
 		$( window ).scroll(function() {
-			if( $(this).scrollTop() > $('header').height() )
+			if( $(this).scrollTop() > $('header').height() + $('.main-nav').height() )
 			{
 				$(".main-nav").addClass("main-nav-scrolled");
 			}

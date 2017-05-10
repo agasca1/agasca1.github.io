@@ -87,6 +87,7 @@ ul li:hover{
 	position: relative;
 }
 
+header,
 .main-nav.main-nav-scrolled {
 	position: fixed;
 	top:0;

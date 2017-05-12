@@ -1,27 +1,66 @@
+/* ####### color pallet:
+#2D5355; /*blu-green dark
+#343C49;/*ashy blue dark
+#A2616B; /*ashy pink
+#C0AAB0; /*very light purple
+#369E55; /*light green
+#6F8F88; /*light ashy blue
+*/
 html{
 	margin: 0;
 	padding: 0;
 	border:0;
-	}
+}
+
 body{
-	background-color: lightblue;
+	background-color: #2D5355; /*blu-green dark*/
+	/*background-image: url("img/background10.jpg");*/
+
 	margin: 0;
 	padding:0;
 	border:0;
-	}
+	color: #343C49;/*ashy blue dark*/
+}
 
 h1{
-	color: blue;
+	color: #C0AAB0; /*very light purple*/
 	text-align: center;
-	}
+	text-shadow: 3px 3px 6px #3e3d3d;
+	padding-top: 20%;
+	font-size: 3.5em;
+}
+
+/*this is there to give everything a centered look*/
+.all-content{ 
+	flex-grow: 1;
+	margin-left: 4%;
+	margin-right: 4%;
+	box-shadow: 1px 1px 50px black;
+}
+
 header {
-	background: yellow;
-	height:100px;
+	/*background: yellow;*/
+	background-image: url("img/header12.jpg");
+	height:450px;
 	padding-top:50px;
 }
 
+p{
+	padding: 0px;
+	margin: 0px;
+}
+
+a{
+	font-size: 1.5em;
+	text-decoration: none;
+}
+/*
+#################################################
+Navigation Bar
+#################################################
+*/
 .main-nav{
-	background-color: red;
+	background-color: #A2616B; /*ashy pink*/
 	overflow: hidden;
 	/*border: none;*/
 	/*margin: 0px;*/
@@ -39,56 +78,105 @@ ul{
 	margin: 0px;
 	padding: 0px;
 	border: 10px;
-	/*float: left;*/
-	/*width: 100%;*/
 	overflow: hidden;
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;		
+	flex-wrap: wrap;/*So they dont try to fit all together*/		
 }
 
 li {
 	text-decoration: none;
 	float: left;
-	padding-left:1%;
-	padding-right: 1%;
-	/*padding-top: 1%;*/
 	min-width: 10%;
 	max-width: 50%;
-	/*overflow: hidden;*/
 	margin: 0px;
-	/*padding: 0px;*/
 	text-align: center;
-	flex-grow: 1;
-
+	flex-grow: 1;/*make it occupy all space*/
 }
 
-a {
-	font-size: 1.5em;
+.nav-a {
+	display: block; /*make li clickable too*/
+	color: #343C49;/*ashy blue dark*/
 }
 
-ul li:hover{
-	background-color:blue;
+.nav-a:hover{
+	text-decoration: none;
+	background-color: #C0AAB0; /*light purple*/
 	color: white;
 	text-shadow: 3px 3px 6px #3e3d3d;
 	box-shadow: 1px 1px 10px #3e3d3d;
 }
 
-.content{
-	font-size: 20px;
-	background: lightgreen;
-	padding-top: 80px; /* compensate for the top*/
-}
-
-		 
-.content{
-	position: relative;
-}
-
-		
-		
+			
 .main-nav-scrolled {
 	position: fixed;
 	top:0;
 	width: 100%;
+}
+
+/* 
+#################################################
+Content of the page(the bottom)
+#################################################
+*/
+.content{
+	font-size: 20px;
+	background: #6F8F88; /*light ashy blue*/
+	padding-top: 80px; /* compensate for the top when scrolling*/
+	/*width: 100%;*/
+	position: relative;
+
+	/*flex-grow: 1;
+	margin-left: 4%;
+	margin-right: 4%;*/
+}
+
+.my-image{
+	width: 250px;
+	height: 250px;
+
+}
+.my-name-and-image{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	color: white;
+	/*width: 100%;*/
+	/*flex-grow: 1;*/
+	/*background-color: #2D5355;/*blu-green dark*/
+	/*margin: 0 auto;*/
+}
+
+h2{
+	padding:0px;
+	margin: 0px;
+	border-bottom: 3px solid white;
+}
+
+
+/*
+#################################################
+Footer
+#################################################
+*/
+
+footer{
+	text-align: center;
+	background-color: #766875;/*darkLL purple ashy*/
+	/*flex-grow: 1;
+
+	margin-left: 4%;
+	margin-right: 4%;*/
+
+}
+
+.icon-a{
+	color: #343C49;/*ashy blue dark*/
+}
+
+.icon-a:hover{
+	color: white;
+	text-shadow: 3px 3px 6px #3e3d3d;
+	font-size: 1.6em;
+	color: #C0AAB0; /*light purple*/
 }

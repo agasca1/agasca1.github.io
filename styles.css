@@ -5,6 +5,7 @@
 #C0AAB0; /*very light purple
 #369E55; /*light green
 #6F8F88; /*light ashy blue
+#766875;/*dark lighter purple ashy(for footer)*/
 */
 html{
 	margin: 0;
@@ -62,8 +63,6 @@ Navigation Bar
 .main-nav{
 	background-color: #A2616B; /*ashy pink*/
 	overflow: hidden;
-	/*border: none;*/
-	/*margin: 0px;*/
 	position:relative;
 	border: none;
 
@@ -105,13 +104,14 @@ li {
 	color: white;
 	text-shadow: 3px 3px 6px #3e3d3d;
 	box-shadow: 1px 1px 10px #3e3d3d;
+	
 }
 
 			
 .main-nav-scrolled {
 	position: fixed;
 	top:0;
-	width: 92%;
+	width: 92%;	
 }
 
 /* 
@@ -125,10 +125,6 @@ Content of the page(the bottom)
 	padding-top: 80px; /* compensate for the top when scrolling*/
 	/*width: 100%;*/
 	position: relative;
-
-	/*flex-grow: 1;
-	margin-left: 4%;
-	margin-right: 4%;*/
 }
 
 .my-image{
@@ -141,10 +137,6 @@ Content of the page(the bottom)
 	margin: 0px;
 	text-align: center;
 	color: white;
-	/*width: 100%;*/
-	/*flex-grow: 1;*/
-	/*background-color: #2D5355;/*blu-green dark*/
-	/*margin: 0 auto;*/
 }
 
 h2{
@@ -162,12 +154,7 @@ Footer
 
 footer{
 	text-align: center;
-	background-color: #766875;/*darkLL purple ashy*/
-	/*flex-grow: 1;
-
-	margin-left: 4%;
-	margin-right: 4%;*/
-
+	background-color: #766875;/*dark lighter purple ashy*/
 }
 
 .icon-a{

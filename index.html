@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<script src="jquery-3.2.1.min.js"></script>
+
 	<meta charset="UTF-8"/>
-	<meta content='width=device-width, initial-scale=1' name='viewport'/>
 	<meta name="description" content="Web Profile"/>
 	<meta name="keywords" content="Araceli Gasca, profile, github, artist, computer science, software developer"/>
 	<meta name="author" content="Araceli Gasca"/>
@@ -16,26 +16,95 @@
 	
 		var mns = "main-nav-scrolled";
 
+
+
 		$( window ).scroll(function() {
-			if( $(this).scrollTop() > $('header').height() + $('.main-nav').height() )
-			{
+
+			if( $(this).scrollTop() > $('header').height() + $('.main-nav').height() && $(window).width() > 430){
 				$(".main-nav").addClass("main-nav-scrolled");
-			}
-			else 
-			{
+
+			} else if($(window).width() > 430){
+
 				$(".main-nav").removeClass(mns);
 			}
+			//Here is where we take care of width 430 and more... for hamburger
+			else if($(window).width() <= 430){
+				$(".main-nav").addClass("main-nav-scrolled");
+				if ($(this).scrollTop() > 0){
+					$(".hamburger").addClass("hamburger-scrolled");
+					$(".cross").addClass("cross-scrolled");
+				}
+				else{
+					$(".hamburger").removeClass("hamburger-scrolled");
+					$(".cross").removeClass("cross-scrolled");
+				}
+
+			}
+			else {
+				//$(".main-nav").removeClass(mns);
+			}
 		});
+
+		$(window).resize(function(){
+			if($(window).width() > 430){
+				$(".cross").hide();
+				$(".hamburger").hide();
+				$(".main-nav").show();
+			}
+			else {
+				if ($(".main-nav").is(":visible")&& !$(".hamburger").is(":visible")){
+					$(".main-nav").hide();
+				}
+				$(".cross").hide();
+				/*$(".main-nav").hide();*/
+				$(".hamburger").show();
+			}
+		});
+		
+		$(window).ready(function(){
+			if($(window).width()>430){
+				$(".cross").hide();
+				$(".hamburger").hide();
+				$(".main-nav").show();
+			}
+			else{
+				$(".cross").hide();
+				$(".main-nav").hide();
+				$(".hamburger").show();
+
+				$(".hamburger").click(function(){
+					$(".main-nav").slideToggle("slow", function() {
+						$(".hamburger").hide();
+						$(".cross").show();
+				
+					});
+				});
+
+				$(".cross").click(function(){
+					$(".main-nav").slideToggle("slow", function(){
+						$(".cross").hide();
+						$(".hamburger").show();
+					});
+				});
+			}	
+		});
+	
 	</script>
+
 </head>
 <body>
 
 <div class="all-content">
-
+	
 	<header>
-		<h1>ARACELI GASCA</h1>
+		<div class="header-content">
+			<h1>ARACELI GASCA</h1>
+		</div>
 	</header>
-	 
+
+	<button class="hamburger">&#9776;</button>
+  	<button class="cross">&#735;</button>
+
 	<nav class = "main-nav">
 		<ul>
 			<li><a class="nav-a" href="#">About Me</a></li>

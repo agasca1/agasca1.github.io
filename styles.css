@@ -6,7 +6,7 @@
 #369E55; /*light green
 #6F8F88; /*light ashy blue
 #766875;/*dark lighter purple ashy(for footer)*/
-*/
+
 html{
 	margin: 0;
 	padding: 0;
@@ -93,6 +93,9 @@ Hamburger-Resposive menu Icon
 	cursor: pointer;
 	z-index: 800;
 	text-shadow: 3px 3px 6px #3e3d3d;
+	border-radius: 8px;
+	position: fixed;
+	top:0;
 }
 .cross{
 	background: none;
@@ -106,6 +109,9 @@ Hamburger-Resposive menu Icon
 	cursor: pointer;
 	z-index: 800;
 	text-shadow: 3px 3px 6px #3e3d3d;
+	border-radius: 70px;
+	position: fixed;
+	top:0;
 }
 
 .hamburger:hover{
@@ -114,18 +120,6 @@ Hamburger-Resposive menu Icon
 
 .cross:hover{
 	background-color: #C0AAB0; /*light purple*/
-}
-
-.hamburger-scrolled{
-	position: fixed;
-	top:0;
-
-}
-
-.cross-scrolled{
-	position: fixed;
-	top:0;
-
 }
 
 
@@ -263,7 +257,7 @@ Resposive CSS to sizeing
 	}
 
 	body{
-		/*background-color: red;*/
+		background-color: red;
 	}
 
 	.main-nav-scrolled {

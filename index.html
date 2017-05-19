@@ -13,84 +13,8 @@
 	<meta name="keywords" content="Araceli Gasca, profile, github, artist, computer science, software developer"/>
 	<meta name="author" content="Araceli Gasca"/>
 
-	<script>
-	
-		var mns = "main-nav-scrolled";
 
-
-
-		$( window ).scroll(function() {
-
-			if( $(this).scrollTop() > $('header').height() + $('.main-nav').height() && $(window).width() > 430){
-				$(".main-nav").addClass("main-nav-scrolled");
-
-			} else if($(window).width() > 430){
-
-				$(".main-nav").removeClass(mns);
-			}
-			//Here is where we take care of width 430 and more... for hamburger
-			else if($(window).width() <= 430){
-				$(".main-nav").addClass("main-nav-scrolled");
-				if ($(this).scrollTop() > 0){
-					$(".hamburger").addClass("hamburger-scrolled");
-					$(".cross").addClass("cross-scrolled");
-				}
-				else{
-					$(".hamburger").removeClass("hamburger-scrolled");
-					$(".cross").removeClass("cross-scrolled");
-				}
-
-			}
-			else {
-				//$(".main-nav").removeClass(mns);
-			}
-		});
-
-		$(window).resize(function(){
-			if($(window).width() > 430){
-				$(".cross").hide();
-				$(".hamburger").hide();
-				$(".main-nav").show();
-			}
-			else {
-				if ($(".main-nav").is(":visible")&& !$(".hamburger").is(":visible")){
-					$(".main-nav").hide();
-				}
-				$(".cross").hide();
-				/*$(".main-nav").hide();*/
-				$(".hamburger").show();
-			}
-		});
-		
-		$(window).ready(function(){
-			if($(window).width()>430){
-				$(".cross").hide();
-				$(".hamburger").hide();
-				$(".main-nav").show();
-			}
-			else{
-				$(".cross").hide();
-				$(".main-nav").hide();
-				$(".hamburger").show();
-
-				$(".hamburger").click(function(){
-					$(".main-nav").slideToggle("slow", function() {
-						$(".hamburger").hide();
-						$(".cross").show();
-				
-					});
-				});
-
-				$(".cross").click(function(){
-					$(".main-nav").slideToggle("slow", function(){
-						$(".cross").hide();
-						$(".hamburger").show();
-					});
-				});
-			}	
-		});
-	
-	</script>
+	<script src="myScripts.js"></script>
 
 </head>
 <body>
@@ -125,11 +49,11 @@
 
 
 	<footer> 
-	<p>Contact Me Here</p>
-	<a class="icon-a" href="#" alt="Gmail"><i class="fa fa-envelope"></i></a>
-	<a class="icon-a" href="https://www.linkedin.com/in/agasca1" alt="LinkedIn"><i class="fa fa-linkedin"></i></a>
-	<a class="icon-a" href="#" alt="Github"><i class="fa fa-github"></i></a>
-	<a class="icon-a" href="#" alt="Deviantart"><i class="fa fa-deviantart"></i></a>
+		<p>Contact Me Here</p>
+		<a class="icon-a" href="#" alt="Gmail"><i class="fa fa-envelope"></i></a>
+		<a class="icon-a" href="https://www.linkedin.com/in/agasca1" alt="LinkedIn"><i class="fa fa-linkedin"></i></a>
+		<a class="icon-a" href="#" alt="Github"><i class="fa fa-github"></i></a>
+		<a class="icon-a" href="#" alt="Deviantart"><i class="fa fa-deviantart"></i></a>
 	</footer>
 </div>
 </body>

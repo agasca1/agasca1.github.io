@@ -213,6 +213,122 @@ h2{
 }
 
 
+
+/*
+#################################################
+Information Timeline Container and what not
+#################################################
+*/
+
+h3{
+	color: white;
+	margin: 0px;
+	padding-bottom: 25px;
+	/*text-shadow: 3px 3px 6px #3e3d3d;*/
+}
+
+/*help for timeline Niels Voogt code found at: http://codepen.io/NielsVoogt/pen/MbMMxv/ */
+.timeline-container{
+	max-width: 1024px;
+	width: 90%;
+	margin:0 auto;
+	background: #6F8F88; /*light ashy blue*/
+
+	
+}
+
+.timeline-item p{
+	color: #343C49; /*ashy blue dark*/ 
+
+
+}
+
+
+.timeline-item{
+	padding: .1em 2em 2em;
+	position: relative;
+	border-left: 2px solid  white;/*this is the line itself*/
+}
+
+.timeline-item:before {
+		position: absolute;
+		left: 2em;
+		font-weight: bold;
+		top:1em;
+		display: block;
+}
+
+.timeline-item:after{ /*this is the circle*/
+		width:12px;
+		height: 12px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -9px; /*where the circle is located*/
+		border-radius: 10px;
+		content: '';
+		border: 2px solid #C0AAB0; /*very light purple , border of circle*/
+		background: white; /*color of circle*/
+		
+
+}
+
+.timeline-item:last-child{
+	border-image: linear-gradient(
+			to bottom,
+			white 60%,
+			#6F8F88) 1 100%;
+}
+
+.timeline-item:hover::after{
+	background: #A2616B; /*ashy pink*/
+}
+
+
+
+/* credits to: Don Quist for help on the bubble code found at:https://blog.sigmaprojects.org/talk-bubbles-in-css/*/
+.talkbubble {
+    margin: .1em 0 .1em;
+    padding: 15px;
+    min-height:20px;
+    background: #C0AAB0; /*very light purple*/
+    background: linear-gradient(to right, #C0AAB0 , #6F8F88); 
+    position: relative;
+    /*border: 1px solid #333333;*/
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
+    border-radius:         5px;
+   /* box-shadow: 2px 2px 3px #888;*/
+    border-right: 0px;
+}
+
+ /*left talk bubble*/
+/*
+.talkbubble:before {
+    content:"";
+    position:absolute;
+    right: 100%;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    /*border-top: 14px inset transparent;
+    border-right: 20px dashed #333333;
+    border-bottom: 14px inset transparent;
+}*/
+.talkbubble:after {
+    content:"";
+    position:absolute;
+    right: 100%;
+    top: 11px;
+    width: 0px;
+    height: 0px;
+    border-top: 13px inset transparent;
+    border-right: 19px dashed #C0AAB0; /*very light purple*/
+    border-bottom: 13px inset transparent;
+}
+/*right talk bubble*/
+
+
 /*
 #################################################
 Footer
@@ -256,9 +372,7 @@ Resposive CSS to sizeing
 		margin-right: 1%;
 	}
 
-	body{
-		background-color: red;
-	}
+	
 
 	.main-nav-scrolled {
 		position: fixed;

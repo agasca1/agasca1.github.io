@@ -220,6 +220,21 @@ Information Timeline Container and what not
 #################################################
 */
 
+/*start of css timeline animation
+/*@import "compass/css3";*/
+.come-in{
+	transform: translateY(150px);
+	animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd){
+	animation-duration: 0.6s;
+}
+
+@keyframes come-in{
+	to{ transform: translateY(0); }
+}
+/* end of css timeline animation */
 h3{
 	color: white;
 	margin: 0px;

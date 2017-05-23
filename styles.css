@@ -237,9 +237,10 @@ h3{
 	
 }
 
+
+
 .timeline-item p{
 	color: #343C49; /*ashy blue dark*/ 
-
 
 }
 
@@ -302,6 +303,10 @@ h3{
     border-right: 0px;
 }
 
+.talkbubble:hover{
+	background: #C0AAB0; /*very light purple*/
+}
+
  /*left talk bubble*/
 /*
 .talkbubble:before {
@@ -327,6 +332,7 @@ h3{
     border-bottom: 13px inset transparent;
 }
 /*right talk bubble*/
+
 
 
 /*

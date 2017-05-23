@@ -25,12 +25,25 @@ $( window ).scroll(function() {
 });
 
 $(window).resize(function(){
+	
+
 	if($(window).width() > 430){
+		//so the height of header is the size of the window even when resized :D
+		$("header").height($(window).height()- $(".main-nav").height());
+
 		$(".cross").hide();
 		$(".hamburger").hide();
+
+		if($(".main-nav").is(":visible")){
+			//so the header doesn't get stuck ontop when resized(mns is fixed postion)
+			$(".main-nav").removeClass(mns); 
+		}
+
 		$(".main-nav").show();
 	}
 	else {
+		$("header").height($(window).height());
+
 		if ($(".main-nav").is(":visible")&& !$(".hamburger").is(":visible")){
 			$(".main-nav").hide();
 		}
@@ -42,11 +55,16 @@ $(window).resize(function(){
 
 $(window).ready(function(){
 	if($(window).width()>430){
+		$("header").height($(window).height()- $(".main-nav").height());
+
+
 		$(".cross").hide();
 		$(".hamburger").hide();
 		$(".main-nav").show();
 	}
 	else{
+		$("header").height($(window).height());
+
 		$(".cross").hide();
 		$(".main-nav").hide();
 		$(".hamburger").show();
@@ -68,3 +86,5 @@ $(window).ready(function(){
 		});
 	}	
 });
+
+

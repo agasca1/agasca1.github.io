@@ -50,8 +50,9 @@ Header Stuff
 */
 header {
 	/*background: yellow;*/
-	background-image: url("img/header12.jpg");
+	background-image: url("img/header11.jpg");
 	height:450px;
+	max-height: 950px;
 	/*padding-top:50px;*/
 	/*display: flex;
 	justify-content: space-around;
@@ -95,7 +96,7 @@ Hamburger-Resposive menu Icon
 	text-shadow: 3px 3px 6px #3e3d3d;
 	border-radius: 8px;
 	position: fixed;
-	top:0;
+	padding-bottom: 3px;
 }
 .cross{
 	background: none;
@@ -109,9 +110,11 @@ Hamburger-Resposive menu Icon
 	cursor: pointer;
 	z-index: 800;
 	text-shadow: 3px 3px 6px #3e3d3d;
-	border-radius: 70px;
+	border-radius: 50%;
 	position: fixed;
-	top:0;
+	padding-top: 7px;
+	padding-right: 13px;
+	padding-left: 13px;
 }
 
 .hamburger:hover{

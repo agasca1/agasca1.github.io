@@ -1,5 +1,28 @@
 var mns = "main-nav-scrolled";
+//var win_height = $(window).height();
+//var nav_height = $(".main-nav").height();
+//var win_width = $(window).width();
 
+
+(function( $){
+	$.fn.header_adjust = function( nav){
+		var win_h = $(window).height();
+		var	nav_h = $(".main-nav").height();
+//true == nav means that nav does exsist(it's visible/should be) & therefore it's height should be taken into account
+		if (win_h - nav_h > 950 || win_h > 950){ 
+			this.height(950);
+		}
+		else if ( nav == true ){
+			this.height(win_h - nav_h);
+		}
+		else{
+			this.height(win_h);
+		}
+		
+		return this;
+
+	};
+})(jQuery);
 
 
 $( window ).scroll(function() {
@@ -29,7 +52,7 @@ $(window).resize(function(){
 
 	if($(window).width() > 430){
 		//so the height of header is the size of the window even when resized :D
-		$("header").height($(window).height()- $(".main-nav").height());
+		$("header").header_adjust(true);
 
 		$(".cross").hide();
 		$(".hamburger").hide();
@@ -42,7 +65,7 @@ $(window).resize(function(){
 		$(".main-nav").show();
 	}
 	else {
-		$("header").height($(window).height());
+		$("header").header_adjust(false);
 
 		if ($(".main-nav").is(":visible")&& !$(".hamburger").is(":visible")){
 			$(".main-nav").hide();
@@ -54,8 +77,8 @@ $(window).resize(function(){
 });
 
 $(window).ready(function(){
-	if($(window).width()>430){
-		$("header").height($(window).height()- $(".main-nav").height());
+	if($(window).width() > 430){
+		$("header").header_adjust(true);
 
 
 		$(".cross").hide();
@@ -63,28 +86,29 @@ $(window).ready(function(){
 		$(".main-nav").show();
 	}
 	else{
-		$("header").height($(window).height());
+		$("header").header_adjust(false);
 
 		$(".cross").hide();
 		$(".main-nav").hide();
 		$(".hamburger").show();
-
-		$(".hamburger").click(function(){
-			$(".main-nav").slideToggle("slow", function() {
-				$(".main-nav").addClass("main-nav-scrolled");
-				$(".hamburger").hide();
-				$(".cross").show();
-		
-			});
-		});
-
-		$(".cross").click(function(){
-			$(".main-nav").slideToggle("slow", function(){
-				$(".cross").hide();
-				$(".hamburger").show();
-			});
-		});
 	}	
+
+	$(document).on("click", ".hamburger", function(event){
+		$(".main-nav").slideToggle("slow", function() {
+			$(".main-nav").addClass("main-nav-scrolled");
+			$(".hamburger").hide();
+			$(".cross").show();
+		
+		});
+	});
+
+	$(document).on("click", ".cross", function(event){
+		$(".main-nav").slideToggle("slow", function(){
+			$(".cross").hide();
+			$(".hamburger").show();
+		});
+	});
+
 });
 
 /*

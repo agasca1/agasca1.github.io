@@ -15,9 +15,19 @@
 
 
 	<script src="myScripts.js"></script>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			$("header").header_adjust();
+		});
+
+		$(window).ready(function(){
+			$("header").header_adjust();
+		});
+
+	</script>
 
 </head>
-<body>
+<body class = "home">
 
 <div class="all-content">
 	
@@ -32,10 +42,10 @@
 
 	<nav class = "main-nav">
 		<ul>
-			<li><a class="nav-a" href="#">About Me</a></li>
-			<li><a class="nav-a" href="#">Projects</a></li>
-			<li><a class="nav-a" href="#">Artwork</a></li>
-			<li><a class="nav-a" href="#">Contact Me</a></li>
+			<li><a class="nav-home" href="index.html">About Me</a></li>
+			<li><a class="nav-proj" href="projects.html">Projects</a></li>
+			<li><a class="nav-art" href="artwork.html">Artwork</a></li>
+			<li><a class="nav-con" href="contact.html">Contact Me</a></li>
 		</ul>
 	</nav>
 
@@ -48,15 +58,24 @@
 		<div class="timeline-container">
 			<div class="timeline-item">
 				<div class="talkbubble">
-					<h3>Interests</h3>
+					<h3>Introduction</h3>
 					<p>
-					This is place holder text but i am intrested in many things. Mainly finishing this website asap. pls. 
+					 Recent graduate searching for a position that will allow me to advance in my career.
 					</p>
 				</div>	
 			</div>
 			<div class="timeline-item">
 				<div class="talkbubble">
-					<h3>Interests2</h3>
+					<h3>Interests</h3>
+					<p>
+					<b>I enjoy:</b> reading novels, drawing both traditional and digitally, designing new concepts and projects, cooking, traveling, caring for animals, movies, knowledge.<br> 
+					<b>I am passionate about:</b> art, strong supporter of human rights and disability rights, animal rights, and the future of technology.
+					</p>
+				</div>
+			</div>
+			<div class="timeline-item">
+				<div class="talkbubble">
+					<h3>Computer Skills</h3>
 					<p>
 					This is place holder text but i am intrested in many things. Mainly finishing this website asap. pls. 
 					</p>
@@ -64,15 +83,7 @@
 			</div>
 			<div class="timeline-item">
 				<div class="talkbubble">
-					<h3>Interests3</h3>
-					<p>
-					This is place holder text but i am intrested in many things. Mainly finishing this website asap. pls. 
-					</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="talkbubble">
-					<h3>Interests4</h3>
+					<h3>Soft Skills</h3>
 					<p>
 					This is place holder text but i am intrested in many things. Mainly finishing this website asap. pls. 
 					</p>
@@ -87,10 +98,10 @@
 
 	<footer> 
 		<p>Contact Me Here</p>
-		<a class="icon-a" href="#" alt="Gmail"><i class="fa fa-envelope"></i></a>
-		<a class="icon-a" href="https://www.linkedin.com/in/agasca1" alt="LinkedIn"><i class="fa fa-linkedin"></i></a>
-		<a class="icon-a" href="#" alt="Github"><i class="fa fa-github"></i></a>
-		<a class="icon-a" href="#" alt="Deviantart"><i class="fa fa-deviantart"></i></a>
+		<a class="icon-a" href="#" ><i class="fa fa-envelope"></i></a>
+		<a class="icon-a" href="https://www.linkedin.com/in/agasca1"><i class="fa fa-linkedin"></i></a>
+		<a class="icon-a" href="https://github.com/agasca1" ><i class="fa fa-github"></i></a>
+		<a class="icon-a" href="#" ><i class="fa fa-deviantart"></i></a>
 	</footer>
 </div>
 </body>

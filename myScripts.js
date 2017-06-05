@@ -5,14 +5,15 @@ var mns = "main-nav-scrolled";
 
 
 (function( $){
-	$.fn.header_adjust = function( nav){
+	$.fn.header_adjust = function(){
 		var win_h = $(window).height();
 		var	nav_h = $(".main-nav").height();
+		var win_w = $(window).width();
 //true == nav means that nav does exsist(it's visible/should be) & therefore it's height should be taken into account
 		if (win_h - nav_h > 950 || win_h > 950){ 
 			this.height(950);
 		}
-		else if ( nav == true ){
+		else if ( win_w > 430 ){
 			this.height(win_h - nav_h);
 		}
 		else{
@@ -24,10 +25,51 @@ var mns = "main-nav-scrolled";
 	};
 })(jQuery);
 
+(function( $){
+	$.fn.content_adjust = function(){
+		var win_h = $(window).height();
+		var	nav_h = $(".main-nav").height();
+		var win_w = $(window).width();
+		var head_h = $("header").height();
+		if (this.height() < win_h && $(".main-nav").is(":visible")){ 
+			this.height(win_h - nav_h);
+		}
+		else if(this.height() < win_h && win_w < 430){
+			this.height(win_h);
+		}
+		
+		return this;
+
+	};
+})(jQuery);
+
+(function( $){
+	$.fn.header_fix = function(){
+		var head_size = ($(window).height())/3;
+		//fix up the header size to be 1/3 of the screen size and 
+		//once it reaches 400px height it hides.
+		if ($(window).height()> 400){
+				if (!this.is(":visible")){ 
+					this.show();
+				}
+				this.height(head_size);
+			}
+			else{
+				this.hide();
+			}
+		
+		return this;
+
+	};
+})(jQuery);
+
+
 
 $( window ).scroll(function() {
-
-	if( $(this).scrollTop() > $('header').height() + $('.main-nav').height() && $(window).width() > 430){
+	if(!$("header").is(":visible")){ /* when the header isnt visible, this happens on a proj page*/
+		$(".main-nav").addClass("main-nav-scrolled");
+	}
+	else if( $(this).scrollTop() > $('header').height() + $('.main-nav').height() && $(window).width() > 430){
 		$(".main-nav").addClass("main-nav-scrolled");
 
 	} else if($(window).width() > 430){
@@ -52,7 +94,6 @@ $(window).resize(function(){
 
 	if($(window).width() > 430){
 		//so the height of header is the size of the window even when resized :D
-		$("header").header_adjust(true);
 
 		$(".cross").hide();
 		$(".hamburger").hide();
@@ -65,7 +106,7 @@ $(window).resize(function(){
 		$(".main-nav").show();
 	}
 	else {
-		$("header").header_adjust(false);
+		
 
 		if ($(".main-nav").is(":visible")&& !$(".hamburger").is(":visible")){
 			$(".main-nav").hide();
@@ -78,15 +119,12 @@ $(window).resize(function(){
 
 $(window).ready(function(){
 	if($(window).width() > 430){
-		$("header").header_adjust(true);
-
 
 		$(".cross").hide();
 		$(".hamburger").hide();
 		$(".main-nav").show();
 	}
 	else{
-		$("header").header_adjust(false);
 
 		$(".cross").hide();
 		$(".main-nav").hide();

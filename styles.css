@@ -167,6 +167,7 @@ li {
  .nav-home, .nav-proj, .nav-art, .nav-con {
 	display: block; /*make li clickable too*/
 	color: #343C49;/*ashy blue dark*/
+	border-bottom: 3px solid #C0AAB0;/*light purple*/
 }
 
 .nav-home:hover, .nav-proj:hover, .nav-art:hover, .nav-con:hover {
@@ -175,7 +176,7 @@ li {
 	color: white;
 	text-shadow: 3px 3px 6px #3e3d3d;
 	box-shadow: 1px 1px 10px #3e3d3d;
-	border-bottom: 3px solid #C0AAB0;
+	border-bottom: 3px solid #C0AAB0;/*light purple*/
 }
 			
 .main-nav-scrolled {

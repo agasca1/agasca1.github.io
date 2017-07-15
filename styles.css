@@ -142,7 +142,7 @@ Navigation Bar
 	margin-bottom: -25px;/* since nav hight is 80px */
 }
 
-ul{
+.main-nav ul{
 	list-style-type: none;
 	text-decoration: none;
 	margin: 0px;
@@ -154,7 +154,7 @@ ul{
 	flex-wrap: wrap;/*So they dont try to fit all together*/		
 }
 
-li {
+.main-nav li {
 	text-decoration: none;
 	float: left;
 	min-width: 10%;
@@ -176,7 +176,7 @@ li {
 	color: white;
 	text-shadow: 3px 3px 6px #3e3d3d;
 	box-shadow: 1px 1px 10px #3e3d3d;
-	border-bottom: 3px solid #C0AAB0;/*light purple*/
+	border-bottom: 3px solid #C0AAB0; /*light purple*/
 }
 			
 .main-nav-scrolled {
@@ -375,6 +375,8 @@ Footer
 footer{
 	text-align: center;
 	background-color: #766875;/*dark lighter purple ashy*/
+	padding-bottom: 2%;
+
 }
 
 .icon-a {
@@ -397,6 +399,7 @@ Project Display
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	border-bottom: 1px solid white;
 }
 
 .line{
@@ -441,8 +444,12 @@ Projects Display
 
 .pad-projs{
 	padding: 2%;
+	padding-top: 20px;
 }
 
+.pad-projs:hover{
+	background-color: grey;
+}
 .a-projs{
 	/*padding: 2%;*/
 	width: 100px;
@@ -476,32 +483,69 @@ Projects Display
 	text-align: center;
 }
 
-.img-1, .img-2, .img-3, .img-4, .img-5{
+
+.img-all{
 	background-size: 100px 100px;
 	background-repeat: no-repeat;
+	max-height: 100px;
+	max-width: 100px;
 	/*border-radius: 50px;*/
 }
 
-.img-1:hover, .img-2:hover, .img-3:hover, .img-4:hover, .img-5:hover{
-	background-size: 105px 105px;
-	border-radius: 50px
+
+.img-all:hover{	
+	border-radius: 50px;
+	box-shadow: 0px 0px 10px 2px #C0AAB0; /*very light purple/ circle shadow*/
+	
 }
 
-.img-1{
+
+.img-all-p{	
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+
+}
+
+.img-1, .img-1-p{
 	background-image: url("img/icons/icons8-PHP.png");
 }
-.img-2{
+.img-2, .img-2-p{
 	background-image: url("img/icons/icons8-Html5.png");
 }
-.img-3{
+.img-3, .img-3-p{
 	background-image: url("img/icons/icons8-C-Plus-Plus_4.png");
 }
 
-.img-4{
+.img-4, .img-4-p{
 	background-image: url("img/icons/icons8-Python.png");
 }
-.img-5{
+.img-5, .img-5-p{
 	background-image: url("img/icons/icons8-SQL_3.png");
+}
+
+.img-6, .img-6-p{
+	background-image: url("img/icons/icons8-CSS3.png");
+}
+
+.img-7, .img-7-p{
+	background-image: url("img/icons/icons8-JavaScript.png");
+}
+
+.img-8, .img-8-p{/*C*/
+	background-image: url("img/icons/icons8-Carbon-Filled.png");
+}
+
+.img-8, .img-8-p{ /* C#*/
+	background-image: url("img/icons/icons8-CS-Filled.png");
+}
+
+.img-9, .img-9-p{ /* C#*/
+	background-image: url("img/icons/icons8-Unity-Filled-100.png");
+}
+
+.img-10, .img-10-p{ 
+	background-image: url("img/icons/bug.gif");
 }
 
 /* Reference (css to display where I got the icons form)
@@ -516,6 +560,42 @@ Projects Display
 }
 .a-icon-link:hover{
 	color: #C0AAB0; /*light purple*/
+
+}
+
+
+
+/*
+#################################################
+Contact Page
+#################################################
+*/
+
+.email-form{
+	/*border-radius: 50%;*/
+	margin: 2em;
+	border: 1.5px solid white;
+	border-radius: 10px;
+}
+
+.email-pad{
+	padding: 2%;
+}
+
+.send{
+	color: #343C49;/*ashy blue dark*/
+	background-color: #A2616B; /*ashy pink*/
+	font-size: .85em;
+	text-shadow: 3px 3px 6px #3e3d3d;
+	/*border: none;*/
+	box-shadow: 1px 1px 10px #3e3d3d;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.send:hover{
+	color: white;
+	background-color: #C0AAB0; /*light purple*/
 }
 
 
